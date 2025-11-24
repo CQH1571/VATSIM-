@@ -10,20 +10,21 @@
     header h1{margin:0}
     main{max-width:900px;margin:20px auto;padding:20px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
     h2{margin-top:0}
-    section{margin-bottom:30px}
-    .input{width:100%;padding:10px;margin:6px 0;border:1px solid #ccc;border-radius:8px}
+    section{margin-bottom:24px}
+    .muted{color:#475569}
+    .card{padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fafafa}
     .btn{display:inline-block;padding:10px 16px;margin-top:10px;border-radius:8px;background:#2ecc71;color:#fff;text-decoration:none;cursor:pointer}
     .btn:hover{opacity:.9}
-    #joinStatus{color:#475569;margin-left:10px}
-    .muted{color:#475569}
+    .email{font-weight:600;color:#111827}
   </style>
 </head>
 <body>
 <header>
   <h1>虚拟春秋航空</h1>
 </header>
+
 <main>
-  <!-- 简介部分 -->
+  <!-- 简介 -->
   <section id="about">
     <h2>虚航简介</h2>
     <p>虚拟春秋航空（Virtual Spring Airlines）是一个基于 VATSIM 的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
@@ -37,51 +38,14 @@
     <p class="muted">说明：本组织与现实中的春秋航空无直接关联，仅用于飞行模拟与学习交流之目的。</p>
   </section>
 
-  <!-- 注册表部分 -->
-  <section id="register">
-    <h2>飞行员报名表</h2>
-    <label>VATSIM CID</label>
-    <input class="input" id="cid" placeholder="如 1234567" />
-    <label>呼号偏好</label>
-    <input class="input" id="callsign" placeholder="如 9C201" />
-    <label>常用机型</label>
-    <input class="input" id="favac" placeholder="如 A320" />
-    <label>常用基地</label>
-    <input class="input" id="hub" placeholder="如 ZSSS / ZSPD / ZYTX" />
-    <label>邮箱</label>
-    <input class="input" id="email" placeholder="如 pilot@example.com" />
-    <div>
-      <button class="btn" onclick="submitJoin()">提交申请</button>
-      <span id="joinStatus"></span>
-    </div>
+  <!-- 联系邮箱 -->
+  <section id="contact" class="card">
+    <h2>报名与咨询</h2>
+    <p>有意者联系：<span class="email">YCNJ-xuanzhi@outlook.com</p>
+    <a class="btn" href="mailto:pilot@your-domain.com?subject=加入虚拟春秋航空&body=您好，我想加入虚拟春秋航空。我的基本信息如下：%0A- VATSIM CID：%0A- 常用机型：%0A- 常用基地：%0A- 呼号偏好：">发送邮件</a>
+    <p class="muted">请在邮件中附上你的 VATSIM CID 与常用机型，方便我们快速审核。</p>
   </section>
 </main>
-
-<script>
-  function submitJoin(){
-    const cid = document.getElementById('cid').value.trim();
-    const callsign = document.getElementById('callsign').value.trim() || `9C${Math.floor(100+Math.random()*900)}`;
-    const favac = document.getElementById('favac').value.trim() || 'A320';
-    const hub = document.getElementById('hub').value.trim() || 'ZSSS';
-    const email = document.getElementById('email').value.trim();
-    const status = document.getElementById('joinStatus');
-
-    if(!cid || !/^\d{6,10}$/.test(cid)){
-      status.textContent = '请填写有效的 VATSIM CID（6-10 位数字）';
-      return;
-    }
-    if(!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
-      status.textContent = '请填写有效的邮箱地址';
-      return;
-    }
-
-    // 模拟生成虚拟ID
-    const vid = `V9C-${String(1000 + Math.floor(Math.random()*9000))}`;
-    console.log("报名信息：",{cid,callsign,favac,hub,email,vid});
-
-    // 跳转到注册成功页面
-    window.location.href = "success.html";
-  }
-</script>
 </body>
 </html>
+
