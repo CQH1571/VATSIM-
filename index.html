@@ -3,32 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>虚拟春秋航空 | VATSIM 虚拟航空</title>
+  <title>虚拟春秋航空 Virtual Spring Airlines</title>
   <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;padding:0;background:#f7fafc;color:#111827}
-    header{background:#2ecc71;color:#fff;padding:16px}
-    header h1{margin:0}
-    main{max-width:900px;margin:20px auto;padding:20px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-    h2{margin-top:0}
-    section{margin-bottom:24px}
+    body{margin:0;font-family:-apple-system,system-ui,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7fafc;color:#111827}
+    header{background:#2ecc71;color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    header h1{margin:0;font-size:20px}
+    nav a{margin-left:16px;color:#fff;text-decoration:none;font-weight:500}
+    nav a:hover{text-decoration:underline}
+    .hero{background:url('https://source.unsplash.com/1600x900/?airplane,sky') center/cover no-repeat;height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+    .hero h2{font-size:36px;margin:0}
+    .hero p{font-size:18px;margin-top:10px}
+    main{max-width:900px;margin:40px auto;padding:0 20px}
+    section{margin-bottom:40px}
+    h3{margin-bottom:10px}
     .muted{color:#475569}
-    .card{padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fafafa}
-    .btn{display:inline-block;padding:10px 16px;margin-top:10px;border-radius:8px;background:#2ecc71;color:#fff;text-decoration:none;cursor:pointer}
-    .btn:hover{opacity:.9}
-    .email{font-weight:600;color:#111827}
+    .contact{background:#e6fffa;padding:20px;border-radius:12px}
+    .contact a{color:#2b6cb0;font-weight:600;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
+
 <header>
-  <h1>虚拟春秋航空</h1>
+  <h1>虚拟春秋航空 Virtual Spring Airlines</h1>
+  <nav>
+    <a href="#">首页 Home</a>
+    <a href="#">机队 Fleet</a>
+    <a href="#">航线 Routes</a>
+    <a href="#">SOP 文档</a>
+    <a href="#">联系 Contact</a>
+  </nav>
 </header>
 
+<div class="hero">
+  <h2>欢迎加入虚拟春秋航空</h2>
+  <p>春风十里，不如一起飞行</p>
+</div>
+
 <main>
-  <!-- 简介 -->
-  <section id="about">
-    <h2>虚航简介</h2>
-    <p>虚拟春秋航空（Virtual Spring Airlines）是一个基于 VATSIM 的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
-    <p class="muted">我们采用真实航线逻辑与 SOP 参考，兼顾入门与进阶训练，欢迎不同机型和平台的飞行员加入。</p>
+  <section>
+    <h3>关于我们 About Us</h3>
+    <p>虚拟春秋航空是一个基于 VATSIM 平台的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
     <ul>
       <li><strong>平台：</strong>VATSIM</li>
       <li><strong>语言：</strong>中文为主</li>
@@ -38,14 +53,15 @@
     <p class="muted">说明：本组织与现实中的春秋航空无直接关联，仅用于飞行模拟与学习交流之目的。</p>
   </section>
 
-  <!-- 联系邮箱 -->
-  <section id="contact" class="card">
-    <h2>报名与咨询</h2>
-    <p>有意者联系：<span class="email">YCNJ-xuanzhi@outlook.com</p>
-    <a class="btn" href="mailto:pilot@your-domain.com?subject=加入虚拟春秋航空&body=您好，我想加入虚拟春秋航空。我的基本信息如下：%0A- VATSIM CID：%0A- 常用机型：%0A- 常用基地：%0A- 呼号偏好：">发送邮件</a>
-    <p class="muted">请在邮件中附上你的 VATSIM CID 与常用机型，方便我们快速审核。</p>
+  <section class="contact">
+    <h3>联系 Contact</h3>
+    <p>有意加入者请发送邮件至：<a href="mailto:pilot@your-domain.com">pilot@your-domain.com</a></p>
+    <p class="muted">请附上你的 VATSIM CID、常用机型与基地，我们将在 24–72 小时内回复。</p>
   </section>
 </main>
+
 </body>
 </html>
+
+
 
