@@ -11,6 +11,7 @@
       background: #f7fafc;
       color: #111827;
     }
+    /* 统一的导航栏（无 logo） */
     header {
       background: #2ecc71;
       color: #fff;
@@ -25,12 +26,6 @@
     header h1 {
       margin: 0;
       font-size: 20px;
-      display: flex;
-      align-items: center;
-    }
-    header h1 img {
-      height: 28px;
-      margin-right: 8px;
     }
     nav a {
       margin-left: 16px;
@@ -41,6 +36,7 @@
     nav a:hover {
       text-decoration: underline;
     }
+    /* 页面主体 */
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -49,6 +45,11 @@
     h2 {
       margin-bottom: 20px;
     }
+    .muted {
+      color: #475569;
+      font-size: 14px;
+    }
+    /* 资源卡片 */
     .resource {
       background: #fff;
       border-radius: 12px;
@@ -58,10 +59,12 @@
     }
     .resource h3 {
       margin-top: 0;
+      margin-bottom: 8px;
     }
-    .muted {
-      color: #475569;
-      font-size: 14px;
+    .meta {
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 10px;
     }
     .btn {
       display: inline-block;
@@ -76,14 +79,20 @@
     .btn:hover {
       opacity: .9;
     }
+    /* 可选的分组标题 */
+    .group-title {
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #334155;
+      font-size: 16px;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>
-    <img src="image/logo.png" alt="Logo"> 虚拟春秋航空 Virtual Spring Airlines
-  </h1>
+  <h1>虚拟春秋航空 Virtual Spring Airlines</h1>
   <nav>
     <a href="index.html">首页 Home</a>
     <a href="fleet.html">机队 Fleet</a>
@@ -94,24 +103,37 @@
 
 <main>
   <h2>下载资源 Download Resources</h2>
-  <p class="muted">在此页面，你可以获取虚拟春秋航空相关的插件、涂装和文档。</p>
+  <p class="muted">在此页面，你可以获取涂装、文档与工具。请确保资源位于仓库的 files/ 目录中，并与下方链接路径一致。</p>
 
+  <div class="group-title">涂装 Livery</div>
   <div class="resource">
     <h3>春秋航空 A320 涂装包</h3>
-    <p class="muted">适用于 MSFS、X-Plane、P3D 的春秋航空 A320 涂装合集。</p>
+    <p class="meta">文件：files/spring-airlines-a320-livery.zip · 大小与更新时间以 GitHub 为准</p>
+    <p class="muted">适用于 MSFS、X-Plane、P3D 的春秋航空 A320 系列涂装合集。</p>
     <a class="btn" href="files/spring-airlines-a320-livery.zip">下载 Download</a>
   </div>
 
+  <div class="group-title">文档 Documents</div>
   <div class="resource">
-    <h3>航线计划文档</h3>
-    <p class="muted">包含主要航线的飞行计划与航图，便于飞行员参考。</p>
+    <h3>航线计划文档 Routes Plan</h3>
+    <p class="meta">文件：files/routes-plan.pdf</p>
+    <p class="muted">包含主要航线的飞行计划与航图，便于飞行员参考与准备。</p>
     <a class="btn" href="files/routes-plan.pdf">下载 Download</a>
   </div>
 
   <div class="resource">
     <h3>飞行员手册 SOP</h3>
-    <p class="muted">标准操作程序文档，帮助飞行员熟悉航司流程与规范。</p>
+    <p class="meta">文件：files/sop-manual.pdf</p>
+    <p class="muted">标准操作程序（SOP）文档，帮助飞行员熟悉航司流程与规范。</p>
     <a class="btn" href="files/sop-manual.pdf">下载 Download</a>
+  </div>
+
+  <div class="group-title">工具 Tools</div>
+  <div class="resource">
+    <h3>常用工具合集</h3>
+    <p class="meta">文件：files/tools-pack.zip</p>
+    <p class="muted">整合常用飞行辅助工具与配置示例，便于新飞快速上手。</p>
+    <a class="btn" href="files/tools-pack.zip">下载 Download</a>
   </div>
 </main>
 
