@@ -13,7 +13,6 @@
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
       scroll-behavior: smooth;
     }
-    /* 导航栏 */
     header {
       position: fixed;
       top: 0;
@@ -30,12 +29,6 @@
     header h1 {
       margin: 0;
       font-size: 20px;
-      display: flex;
-      align-items: center;
-    }
-    header h1 img {
-      height: 28px;
-      margin-right: 8px;
     }
     nav a {
       margin-left: 16px;
@@ -46,7 +39,6 @@
     nav a:hover {
       text-decoration: underline;
     }
-    /* 第一屏背景 */
     .hero {
       background: url('image/hero-bg.jpg') center/cover no-repeat;
       height: 100vh;
@@ -65,7 +57,6 @@
       font-size: 20px;
       margin-top: 10px;
     }
-    /* 第二屏简介 */
     .about {
       height: 100vh;
       background: #f7fafc;
@@ -99,7 +90,6 @@
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
-    /* 右下角加入我们按钮 */
     .join-btn {
       position: fixed;
       bottom: 30px;
@@ -121,9 +111,7 @@
 <body>
 
 <header>
-  <h1>
-    <img src="image/logo.png" alt="Logo"> 虚拟春秋航空 Virtual Spring Airlines
-  </h1>
+  <h1>虚拟春秋航空 Virtual Spring Airlines</h1>
   <nav>
     <a href="index.html">首页 Home</a>
     <a href="fleet.html">机队 Fleet</a>
@@ -132,13 +120,11 @@
   </nav>
 </header>
 
-<!-- 第一屏 -->
 <div class="hero">
   <h2>欢迎加入虚拟春秋航空</h2>
   <p>春风十里，不如一起飞行</p>
 </div>
 
-<!-- 第二屏 简介 -->
 <div class="about">
   <h3>关于我们 About Us</h3>
   <p>虚拟春秋航空是一个基于 VATSIM 平台的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
