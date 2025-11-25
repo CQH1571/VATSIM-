@@ -11,7 +11,7 @@
       height: 100%;
       width: 100%;
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-      scroll-behavior: smooth; /* 平滑滚动 */
+      scroll-behavior: smooth;
     }
     /* 导航栏 */
     header {
@@ -70,23 +70,18 @@
       padding: 40px;
       box-sizing: border-box;
     }
-    .about h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: floatUp 1s forwards;
-      animation-delay: 0.3s;
-    }
-    .about p, .about ul {
+    .about h3, .about p, .about ul {
       max-width: 800px;
       font-size: 18px;
       line-height: 1.6;
       color: #333;
       opacity: 0;
       transform: translateY(40px);
-      animation: floatUp 1s forwards;
-      animation-delay: 0.6s;
+      transition: all 1s ease;
+    }
+    .about h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
     .about ul {
       margin-top: 20px;
@@ -94,12 +89,10 @@
     .about li {
       margin-bottom: 8px;
     }
-    /* 向上浮出动画 */
-    @keyframes floatUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* 进入视口时触发动画 */
+    .animate {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
     /* 右下角加入我们按钮 */
     .join-btn {
@@ -153,6 +146,25 @@
 
 <!-- 加入我们按钮 -->
 <a class="join-btn" href="join.html">加入我们 Join</a>
+
+<script>
+  // 使用 Intersection Observer 触发浮出动画
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate"); // 离开时移除，方便再次触发
+        }
+      });
+    });
+
+    document.querySelectorAll(".about h3, .about p, .about ul").forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 
 </body>
 </html>
