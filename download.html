@@ -18,10 +18,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       margin: 0;
       font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    header h1 img {
+      height: 28px;
+      margin-right: 8px;
     }
     nav a {
       margin-left: 16px;
@@ -72,11 +81,13 @@
 <body>
 
 <header>
-  <h1>虚拟春秋航空 Virtual Spring Airlines</h1>
+  <h1>
+    <img src="image/logo.png" alt="Logo"> 虚拟春秋航空 Virtual Spring Airlines
+  </h1>
   <nav>
     <a href="index.html">首页 Home</a>
+    <a href="fleet.html">机队 Fleet</a>
     <a href="download.html">下载 Download</a>
-    <a href="routes.html">航线 Routes</a>
     <a href="join.html">加入我们 Join</a>
   </nav>
 </header>
@@ -87,22 +98,21 @@
 
   <div class="resource">
     <h3>春秋航空 A320 涂装包</h3>
-    <p class="muted">适用于常见模拟平台（如 MSFS、X-Plane、P3D）的春秋航空 A320 涂装合集。</p>
+    <p class="muted">适用于 MSFS、X-Plane、P3D 的春秋航空 A320 涂装合集。</p>
     <a class="btn" href="files/spring-airlines-a320-livery.zip">下载 Download</a>
   </div>
 
   <div class="resource">
     <h3>航线计划文档</h3>
-    <p class="muted">包含虚拟春秋航空主要航线的飞行计划与航图，便于飞行员参考。</p>
+    <p class="muted">包含主要航线的飞行计划与航图，便于飞行员参考。</p>
     <a class="btn" href="files/routes-plan.pdf">下载 Download</a>
   </div>
 
   <div class="resource">
     <h3>飞行员手册 SOP</h3>
-    <p class="muted">标准操作程序（SOP）文档，帮助飞行员熟悉航司流程与规范。</p>
+    <p class="muted">标准操作程序文档，帮助飞行员熟悉航司流程与规范。</p>
     <a class="btn" href="files/sop-manual.pdf">下载 Download</a>
   </div>
-
 </main>
 
 </body>
