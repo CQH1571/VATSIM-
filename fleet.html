@@ -25,6 +25,12 @@
     header h1 {
       margin: 0;
       font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    header h1 img {
+      height: 28px;
+      margin-right: 8px;
     }
     nav a {
       margin-left: 16px;
@@ -39,12 +45,6 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      margin-bottom: 10px;
     }
     .aircraft {
       background: #fff;
@@ -64,7 +64,9 @@
 <body>
 
 <header>
-  <h1>虚拟春秋航空 Virtual Spring Airlines</h1>
+  <h1>
+    <img src="image/logo.png" alt="Logo"> 虚拟春秋航空 Virtual Spring Airlines
+  </h1>
   <nav>
     <a href="index.html">首页 Home</a>
     <a href="fleet.html">机队 Fleet</a>
@@ -75,38 +77,37 @@
 
 <main>
   <h2>机队介绍 Fleet Overview</h2>
-  <p>虚拟春秋航空采用空客 A320 系列作为主力机型，涵盖从短程支线到远程高密度航线的多种配置，兼顾性能、经济性与飞行乐趣。</p>
+  <p>虚拟春秋航空采用空客 A320 系列作为主力机型，涵盖从短程支线到远程高密度航线的多种配置。</p>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A318</h3>
-    <p class="muted">A320 系列中最短的机型，适合超短程航线，最多可容纳约107名乘客。</p>
-  </section>
+    <p class="muted">最短机型，适合超短程航线，约107座。</p>
+  </div>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A319</h3>
-    <p class="muted">短程支线机型，灵活性高，适合中小机场运营，典型载客量约124人。</p>
-  </section>
+    <p class="muted">短程支线机型，约124座，灵活性高。</p>
+  </div>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A320</h3>
-    <p class="muted">最经典的中程主力机型，广泛用于春秋航空国内航线，载客量约150人。</p>
-  </section>
+    <p class="muted">经典中程主力机型，约150座。</p>
+  </div>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A320neo</h3>
-    <p class="muted">新一代高效机型，采用 CFM LEAP-1A 或 PW1100G 发动机，油耗更低、噪音更小。</p>
-  </section>
+    <p class="muted">新一代高效机型，油耗更低，噪音更小。</p>
+  </div>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A321</h3>
-    <p class="muted">加长版机型，适合高密度航线，载客量可达185人以上。</p>
-  </section>
+    <p class="muted">加长版机型，适合高密度航线，185座以上。</p>
+  </div>
 
-  <section class="aircraft">
+  <div class="aircraft">
     <h3>A321neo / A321XLR</h3>
-    <p class="muted">最新远程型号，具备更强航程与载客能力，适合跨区域中远程航线。</p>
-  </section>
-
+    <p class="muted">最新远程型号，航程更远，适合跨区域航线。</p>
+  </div>
 </main>
 
 </body>
