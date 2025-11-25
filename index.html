@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>虚拟春秋航空 Virtual Spring Airlines</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #f7fafc;
-      color: #111827;
     }
+    /* 导航栏 */
     header {
-      background: #2ecc71;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(46, 204, 113, 0.9);
       color: #fff;
       padding: 16px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 1000;
     }
     header h1 {
       margin: 0;
@@ -32,55 +39,41 @@
     nav a:hover {
       text-decoration: underline;
     }
+    /* 全屏背景 */
     .hero {
       background: url('hero-bg.jpg') center/cover no-repeat;
-      height: 400px;
+      height: 100%;
+      width: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #fff;
       text-shadow: 0 2px 6px rgba(0,0,0,.5);
+      flex-direction: column;
     }
     .hero h2 {
-      font-size: 36px;
+      font-size: 48px;
       margin: 0;
     }
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 10px;
     }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h3 {
-      margin-bottom: 10px;
-    }
-    .muted {
-      color: #475569;
-    }
-    .contact {
-      background: #e6fffa;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
+    /* 加入我们按钮右下角 */
+    .join-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 14px 24px;
       border-radius: 8px;
       background: #2ecc71;
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-      margin: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+      z-index: 1000;
     }
-    .btn:hover {
+    .join-btn:hover {
       opacity: .9;
     }
   </style>
@@ -102,27 +95,7 @@
   <p>春风十里，不如一起飞行</p>
 </div>
 
-<main>
-  <section>
-    <h3>关于我们 About Us</h3>
-    <p>虚拟春秋航空是一个基于 VATSIM 平台的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
-    <ul>
-      <li><strong>平台：</strong>VATSIM</li>
-      <li><strong>语言：</strong>中文为主</li>
-      <li><strong>基地：</strong>上海虹桥 ZSSS / 上海浦东 ZSPD / 沈阳桃仙 ZYTX</li>
-      <li><strong>定位：</strong>休闲 + 半写实</li>
-    </ul>
-    <p class="muted">说明：本组织与现实中的春秋航空无直接关联，仅用于飞行模拟与学习交流之目的。</p>
-  </section>
-
-  <section class="contact" id="contact">
-    <h3>快速入口 Quick Access</h3>
-    <p>点击下方按钮，进入相关页面。</p>
-    <a class="btn" href="fleet.html">机队 Fleet</a>
-    <a class="btn" href="download.html">下载 Download</a>
-    <a class="btn" href="join.html">加入我们 Join</a>
-  </section>
-</main>
+<a class="join-btn" href="join.html">加入我们 Join</a>
 
 </body>
 </html>
