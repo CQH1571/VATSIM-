@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>加入虚拟春秋航空 Join Virtual Spring Airlines</title>
+  <title>加入我们 | 虚拟春秋航空</title>
   <style>
     body {
       margin: 0;
@@ -11,37 +11,61 @@
       background: #f7fafc;
       color: #111827;
     }
-    .container {
+    header {
+      background: #2ecc71;
+      color: #fff;
+      padding: 16px 24px;
       display: flex;
-      min-height: 100vh;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .form-section {
-      flex: 1;
-      padding: 40px;
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    header h1 img {
+      height: 28px;
+      margin-right: 8px;
+    }
+    nav a {
+      margin-left: 16px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    form {
       background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,.1);
-    }
-    .form-section h2 {
-      margin-top: 0;
-      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.05);
     }
     label {
       display: block;
-      margin-top: 15px;
+      margin-top: 12px;
       font-weight: 600;
     }
-    .desc {
-      font-size: 13px;
-      color: #475569;
-      margin-bottom: 5px;
-    }
-    input {
+    input, textarea {
       width: 100%;
       padding: 10px;
+      margin-top: 6px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 14px;
     }
-    .btn {
+    button {
       margin-top: 20px;
       padding: 12px 20px;
       border: none;
@@ -51,47 +75,42 @@
       font-weight: 600;
       cursor: pointer;
     }
-    .btn:hover { opacity: .9; }
-    .image-section {
-      flex: 1;
-      background: url('join-bg.jpg') center/cover no-repeat;
+    button:hover {
+      opacity: .9;
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- 左侧表单 -->
-  <div class="form-section">
-    <h2>加入我们 Join Us</h2>
-    <form>
-      <label for="fname">First Name</label>
-      <div class="desc">请输入你的名字（名）。</div>
-      <input type="text" id="fname" name="fname" placeholder="如：Li" required>
+<header>
+  <h1>
+    <img src="image/logo.png" alt="Logo"> 虚拟春秋航空 Virtual Spring Airlines
+  </h1>
+  <nav>
+    <a href="index.html">首页 Home</a>
+    <a href="fleet.html">机队 Fleet</a>
+    <a href="download.html">下载 Download</a>
+    <a href="join.html">加入我们 Join</a>
+  </nav>
+</header>
 
-      <label for="lname">Last Name</label>
-      <div class="desc">请输入你的姓氏。</div>
-      <input type="text" id="lname" name="lname" placeholder="如：Wang" required>
+<main>
+  <h2>加入我们 Join Us</h2>
+  <p>填写以下表格，申请加入虚拟春秋航空。</p>
 
-      <label for="cid">VATSIM CID</label>
-      <div class="desc">你的 VATSIM 注册号（6-10 位数字）。</div>
-      <input type="text" id="cid" name="cid" placeholder="如：1234567" required>
+  <form>
+    <label for="name">姓名 Name</label>
+    <input type="text" id="name" name="name" required>
 
-      <label for="email">Email Address</label>
-      <div class="desc">用于联系和账号确认的邮箱。</div>
-      <input type="email" id="email" name="email" placeholder="如：pilot@example.com" required>
+    <label for="email">邮箱 Email</label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="password">Password</label>
-      <div class="desc">设置一个登录密码（至少 6 位）。</div>
-      <input type="password" id="password" name="password" placeholder="请输入密码" required>
+    <label for="experience">飞行经验 Flight Experience</label>
+    <textarea id="experience" name="experience" rows="4"></textarea>
 
-      <button class="btn" type="submit">提交申请 Submit</button>
-    </form>
-  </div>
-
-  <!-- 右侧图片 -->
-  <div class="image-section"></div>
-</div>
+    <button type="submit">提交申请 Submit</button>
+  </form>
+</main>
 
 </body>
 </html>
