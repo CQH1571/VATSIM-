@@ -11,6 +11,7 @@
       height: 100%;
       width: 100%;
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      scroll-behavior: smooth; /* 平滑滚动 */
     }
     /* 导航栏 */
     header {
@@ -39,17 +40,16 @@
     nav a:hover {
       text-decoration: underline;
     }
-    /* 全屏背景 */
+    /* 第一屏背景 */
     .hero {
       background: url('hero-bg.jpg') center/cover no-repeat;
-      height: 100%;
-      width: 100%;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #fff;
       text-shadow: 0 2px 6px rgba(0,0,0,.5);
-      flex-direction: column;
     }
     .hero h2 {
       font-size: 48px;
@@ -59,7 +59,49 @@
       font-size: 20px;
       margin-top: 10px;
     }
-    /* 加入我们按钮右下角 */
+    /* 第二屏简介 */
+    .about {
+      height: 100vh;
+      background: #f7fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .about h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: floatUp 1s forwards;
+      animation-delay: 0.3s;
+    }
+    .about p, .about ul {
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: floatUp 1s forwards;
+      animation-delay: 0.6s;
+    }
+    .about ul {
+      margin-top: 20px;
+    }
+    .about li {
+      margin-bottom: 8px;
+    }
+    /* 向上浮出动画 */
+    @keyframes floatUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* 右下角加入我们按钮 */
     .join-btn {
       position: fixed;
       bottom: 30px;
@@ -90,11 +132,26 @@
   </nav>
 </header>
 
+<!-- 第一屏 -->
 <div class="hero">
   <h2>欢迎加入虚拟春秋航空</h2>
   <p>春风十里，不如一起飞行</p>
 </div>
 
+<!-- 第二屏 简介 -->
+<div class="about">
+  <h3>关于我们 About Us</h3>
+  <p>虚拟春秋航空是一个基于 VATSIM 平台的中文虚拟航空组织，致力于提供规范、愉快且高还原度的多人在线飞行体验。</p>
+  <ul>
+    <li><strong>平台：</strong>VATSIM</li>
+    <li><strong>呼号：</strong>春秋 CQH/9C</li>
+    <li><strong>基地：</strong>上海浦东 ZSPD</li>
+    <li><strong>定位：</strong>VATSIM 新飞培养基地</li>
+  </ul>
+  <p class="muted">说明：本组织与现实中的春秋航空无直接关联，仅用于飞行模拟与学习交流之目的。</p>
+</div>
+
+<!-- 加入我们按钮 -->
 <a class="join-btn" href="join.html">加入我们 Join</a>
 
 </body>
